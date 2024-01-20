@@ -12,13 +12,13 @@ const Search = styled.div`
     opacity: 0.6;
   }
   &:focus-within {
-    border-color: cyan;
+    border-color: ${(props) => props.glow};
   }
 `;
 
 export default function SearchBar(props) {
   return (
-    <Search>
+    <Search as="search" glow={props.glow}>
       <SearchIco />
       <input {...props} />
     </Search>

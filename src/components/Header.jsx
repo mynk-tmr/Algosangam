@@ -4,14 +4,16 @@ import SearchBar from "./SearchBar";
 import styled from "styled-components";
 
 const Wrapper = styled.header`
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   padding: 1rem 2rem;
   align-items: center;
-  font-size: 1.125rem;
   > * {
     display: flex;
     gap: 1rem;
+  }
+  nav {
+    justify-self: end;
   }
 `;
 
@@ -22,6 +24,7 @@ export default function Header() {
       <SearchBar
         style={{ width: "30ch" }}
         placeholder="Search Algosangam ..."
+        glow="cyan"
       />
       <nav>
         <Linkbutton glow="lightpink">
