@@ -24,7 +24,7 @@ export default function Header() {
       <SearchBar
         style={{ width: "30ch" }}
         placeholder="Search Algosangam ..."
-        color="cyan"
+        glow="cyan"
       />
       <nav>
         <Linkbutton as="a" color="lightgreen">
