@@ -24,13 +24,13 @@ export default function Header() {
       <SearchBar
         style={{ width: "30ch" }}
         placeholder="Search Algosangam ..."
-        glow="cyan"
+        color="cyan"
       />
       <nav>
-        <Linkbutton glow="lightgreen">
+        <Linkbutton as="a" color="lightgreen">
           <HelpIco /> Get Help
         </Linkbutton>
-        <Linkbutton glow="yellow">
+        <Linkbutton as="a" color="yellow">
           <ThemeIco /> Switch Theme
         </Linkbutton>
       </nav>

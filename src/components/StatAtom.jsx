@@ -1,12 +1,7 @@
 import styled from "styled-components";
+import GlowContainer from "./GlowContainer";
 
-const Wrapper = styled.article`
-  display: inline-flex;
-  gap: 1.1rem;
-  border: 1px solid ${(props) => props.color};
-  box-shadow: 2px 0 5px ${(props) => props.color};
-  border-radius: 5px;
-  padding: 0.25rem;
+const Wrapper = styled(GlowContainer)`
   code {
     font-size: 1.25rem;
   }
@@ -19,7 +14,7 @@ const Wrapper = styled.article`
 
 export default function StatAtom({ bgcol, stat, value, slot }) {
   return (
-    <Wrapper color={bgcol}>
+    <Wrapper color={bgcol} gap="1.1rem">
       {slot}
       <span>
         <code>{value}</code>
