@@ -1,7 +1,7 @@
 /* eslint-disable react/display-name */
 const withWrapper = (Icon) => (props) =>
   (
-    <div className="flex items-center">
+    <div style={{ display: "flex", alignItems: "center" }}>
       <Icon {...props} />
     </div>
   );

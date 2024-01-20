@@ -1,7 +1,7 @@
 .paint {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  padding: 2rem 1rem;
+  padding: 1rem 2rem;
   align-items: center;
   font-size: 1.125rem;
 
@@ -16,10 +16,11 @@
 
   nav {
     display: flex;
-    justify-content: flex-end;
+    gap: 1rem;
     a {
       display: flex;
-      gap: 1rem;
+      gap: 0.5rem;
+      align-items: center;
     }
   }
 }
