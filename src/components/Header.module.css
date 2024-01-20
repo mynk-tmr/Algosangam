@@ -1,0 +1,25 @@
+.paint {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 2rem 1rem;
+  align-items: center;
+  font-size: 1.125rem;
+
+  search {
+    display: flex;
+    gap: 1rem;
+
+    input {
+      width: 40ch;
+    }
+  }
+
+  nav {
+    display: flex;
+    justify-content: flex-end;
+    a {
+      display: flex;
+      gap: 1rem;
+    }
+  }
+}

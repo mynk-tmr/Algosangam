@@ -1,4 +1,9 @@
-@config '../config/tailwind.config.js'
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+:root {
+  --bg-color-app: black;
+  --text-color-app: white;
+}
+
+body {
+  color: var(--text-color-app);
+  background-color: var(--bg-color-app);
+}
