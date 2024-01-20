@@ -1,24 +1,36 @@
-import { ArrowRight, HelpIco, SearchIco, ThemeIco } from "../shared/icons";
+import { HelpIco, ThemeIco } from "../shared/icons";
+import Linkbutton from "./Linkbutton";
+import SearchBar from "./SearchBar";
+import styled from "styled-components";
 
-import styles from "./Header.module.css";
+const Wrapper = styled.header`
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  align-items: center;
+  font-size: 1.125rem;
+  > * {
+    display: flex;
+    gap: 1rem;
+  }
+`;
 
 export default function Header() {
   return (
-    <header className={styles.paint}>
+    <Wrapper>
       <a>LOGO</a>
-      <search>
-        <SearchIco />
-        <input type="search" />
-        <ArrowRight />
-      </search>
+      <SearchBar
+        style={{ width: "30ch" }}
+        placeholder="Search Algosangam ..."
+      />
       <nav>
-        <a>
+        <Linkbutton glow="lightpink">
           <HelpIco /> Get Help
-        </a>
-        <a>
+        </Linkbutton>
+        <Linkbutton glow="yellow">
           <ThemeIco /> Switch Theme
-        </a>
+        </Linkbutton>
       </nav>
-    </header>
+    </Wrapper>
   );
 }

@@ -7,3 +7,15 @@ body {
   color: var(--text-color-app);
   background-color: var(--bg-color-app);
 }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  cursor: pointer;
+}
