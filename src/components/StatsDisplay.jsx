@@ -6,9 +6,9 @@ const Section = styled.section`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   place-items: center;
-  border: 1px solid;
+  border-block: 1px solid;
   padding: 4rem;
-  row-gap: 5rem;
+  gap: 5rem 1rem;
 
   .heading {
     grid-column: 2/-2;

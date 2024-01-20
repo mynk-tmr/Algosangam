@@ -2,6 +2,7 @@ import styled from "styled-components";
 import GlowContainer from "./GlowContainer";
 
 const Wrapper = styled(GlowContainer)`
+  padding-right: 1rem;
   code {
     font-size: 1.25rem;
   }

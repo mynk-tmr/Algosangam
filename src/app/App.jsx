@@ -2,6 +2,7 @@ import styled from "styled-components";
 import BannerSection from "../components/BannerSection";
 import Header from "../components/Header";
 import StatsDisplay from "../components/StatsDisplay";
+import FeatureIntro from "../components/FeatureIntro";
 
 const Section = styled.section`
   display: grid;
@@ -17,6 +18,7 @@ export default function App() {
         <BannerSection />
       </Section>
       <StatsDisplay />
+      <FeatureIntro />
     </>
   );
 }

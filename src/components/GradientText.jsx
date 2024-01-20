@@ -8,7 +8,7 @@ const GradientText = styled.span`
   font-size: ${(props) => props.size};
   background-clip: text;
   color: transparent;
-  inline-size: max-content;
+  inline-size: fit-content;
   padding-inline: 0.5rem;
 `;
 
