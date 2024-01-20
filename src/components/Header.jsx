@@ -27,7 +27,7 @@ export default function Header() {
         glow="cyan"
       />
       <nav>
-        <Linkbutton glow="lightpink">
+        <Linkbutton glow="lightgreen">
           <HelpIco /> Get Help
         </Linkbutton>
         <Linkbutton glow="yellow">
