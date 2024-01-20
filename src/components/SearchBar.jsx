@@ -1,26 +1,27 @@
 import { SearchIco } from "../shared/icons";
 import styled from "styled-components";
 
-const Search = styled.div`
+const Search = styled.form`
   border: 1px solid gray;
   border-radius: 5px;
-  width: max-content;
+  width: fit-content;
   padding: 0.25rem 1rem;
   input {
     all: inherit;
     border: none;
     opacity: 0.6;
+    width: ${(props) => props.width};
   }
   &:focus-within {
-    border-color: ${(props) => props.glow};
+    border-color: ${(props) => props.$glow};
   }
 `;
 
-export default function SearchBar({ glow, ...props }) {
+export default function SearchBar({ width, $glow, ...rest }) {
   return (
-    <Search as="search" glow={glow}>
+    <Search {...{ width, $glow }} onSubmit={(e) => e.preventDefault()}>
       <SearchIco />
-      <input {...props} />
+      <input {...rest} />
     </Search>
   );
 }

@@ -15,7 +15,7 @@ const Wrapper = styled(GlowContainer)`
 
 export default function StatAtom({ bgcol, stat, value, slot }) {
   return (
-    <Wrapper color={bgcol} gap="1.1rem">
+    <Wrapper color={bgcol} $gap="1.1rem">
       {slot}
       <span>
         <code>{value}</code>

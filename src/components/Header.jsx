@@ -22,9 +22,9 @@ export default function Header() {
     <Wrapper>
       <a>LOGO</a>
       <SearchBar
-        style={{ width: "30ch" }}
+        width="30ch"
         placeholder="Search Algosangam ..."
-        glow="cyan"
+        $glow="cyan"
       />
       <nav>
         <Linkbutton as="a" color="lightgreen">

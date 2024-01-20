@@ -26,7 +26,7 @@ const Section = styled.section`
 export default function BannerSection() {
   return (
     <Section>
-      <GradientText as="h1" size="7rem" colors={["cyan", "purple", "pink"]}>
+      <GradientText as="h1" size="7rem" $colors={["cyan", "purple", "pink"]}>
         Algo Sangam
       </GradientText>
       <p>
