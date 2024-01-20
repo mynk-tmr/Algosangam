@@ -9,12 +9,17 @@ const Section = styled.section`
   align-content: center;
   padding: 2rem;
   row-gap: 3rem;
+  font-size: large;
 
+  p {
+    strong {
+      color: gold;
+    }
+  }
   nav {
     display: flex;
     gap: 2rem;
     padding: 0 2rem;
-    font-size: large;
   }
 `;
 
@@ -24,6 +29,10 @@ export default function BannerSection() {
       <GradientText as="h1" size="7rem" colors={["cyan", "purple", "pink"]}>
         Algo Sangam
       </GradientText>
+      <p>
+        Create, Share and Edit code with peers. Use the power of{" "}
+        <strong>Spaced-Repetition</strong> to internalise algorithms.
+      </p>
       <nav>
         <Linkbutton glow="cyan">
           <LoginIco /> Sign In

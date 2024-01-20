@@ -16,9 +16,9 @@ const Search = styled.div`
   }
 `;
 
-export default function SearchBar(props) {
+export default function SearchBar({ glow, ...props }) {
   return (
-    <Search as="search" glow={props.glow}>
+    <Search as="search" glow={glow}>
       <SearchIco />
       <input {...props} />
     </Search>
