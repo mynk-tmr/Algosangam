@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { ClockIco, CodeIco, EyeIco, LikeIco } from "../shared/icons";
 import CodeBlock from "./CodeBlock";
+import { useState } from "react";
+import Linkbutton from "./Linkbutton";
 
 const Wrapper = styled.section`
   padding: 1rem;
@@ -52,6 +54,9 @@ export default function SnipperCard({
   lang,
   content,
 }) {
+  const [open, setOpen] = useState(false);
+  const toggle = () => setOpen(!open);
+
   return (
     <Wrapper>
       <h1>{title}</h1>
@@ -68,8 +73,13 @@ export default function SnipperCard({
         <CodeIco /> {lang}
       </data>
       <figure data-code>
-        <CodeBlock lang={lang}>{content}</CodeBlock>
+        <CodeBlock lang={lang}>
+          {open ? content : content.slice(0, 80) + "......."}
+        </CodeBlock>
       </figure>
+      <Linkbutton $color="lightgreen" onClick={toggle}>
+        {open ? "Fold" : "Expand"} Snippet
+      </Linkbutton>
     </Wrapper>
   );
 }

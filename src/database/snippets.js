@@ -28,6 +28,45 @@ const snippets = [
   true
 }`,
   },
+  {
+    title: `useSignal in Reactjs`,
+    likes: `4`,
+    views: `200`,
+    date: new Date(2024, 0, 13),
+    lang: `jsx`,
+    content: `function useSignal(init) {
+  const [state, setState] = useState(init);
+  return {
+    get mut() { return state },
+    set mut(_new) { setState(_new) }
+  }
+}`,
+  },
+  {
+    title: `Binary Search in GoLang`,
+    likes: `3`,
+    views: `101`,
+    date: new Date(2023, 10, 20),
+    lang: `go`,
+    content: `func binary_search(array []int64, to_search int64) bool {
+  found := false
+  low := 0
+  high := len(array) - 1
+  for low <= high {
+    mid := (low + high) / 2
+    if array[mid] == to_search {
+      found = true
+      break
+    }
+    if array[mid] > to_search {
+      high = mid - 1
+    } else {
+      low = mid + 1
+    }
+  }
+  return found
+}`,
+  },
 ];
 
 export default snippets;
