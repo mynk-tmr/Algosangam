@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "bunx --bun vite --config ./config/vite.config.js serve ./src",
-    "build": "bunx --bun vite --config ./config/vite.config.js build ./src",
+    "vbuild": "bunx --bun vite --config ./config/vite.config.js build ./src",
     "lint": "bunx --bun eslint --config ./config/.eslintrc.cjs . --ext js,jsx",
     "preview": "bunx --bun vite --config ./config/vite.config.js preview ./src"
   },
