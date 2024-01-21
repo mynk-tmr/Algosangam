@@ -34,13 +34,13 @@ export default function BannerSection() {
         <strong>Spaced-Repetition</strong> to internalise algorithms.
       </p>
       <nav>
-        <Linkbutton color="cyan">
+        <Linkbutton $color="cyan">
           <LoginIco /> Sign In
         </Linkbutton>
-        <Linkbutton color="pink">
+        <Linkbutton $color="pink">
           <HeartIco /> Donate
         </Linkbutton>
-        <Linkbutton color="dodgerblue">
+        <Linkbutton $color="dodgerblue">
           <GroupsIco /> See Community
         </Linkbutton>
       </nav>

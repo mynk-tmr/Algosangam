@@ -1,17 +1,23 @@
 import styled from "styled-components";
+import GlowContainer from "./GlowContainer";
 
-const Wrapper = styled.article`
-  border: 5px solid ${(props) => props.$color};
+const Wrapper = styled(GlowContainer)`
+  flex-direction: column;
+  border-width: 5px;
   border-radius: 15px;
-  display: grid;
-  padding: 1rem 0.5rem;
+  box-shadow: 0 15px 20px ${(props) => props.$color};
   translate: 0 ${(props) => props.$translateY};
   transition: all 0.33s ease-in-out;
+  cursor: zoom-in;
+
+  > h1 {
+    flex-grow: 1;
+    text-align: center;
+  }
 
   > img {
-    width: 100%;
-    height: 100%;
     object-fit: cover;
+    flex-grow: 2;
   }
 `;
 

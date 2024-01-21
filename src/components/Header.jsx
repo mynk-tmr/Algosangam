@@ -27,10 +27,10 @@ export default function Header() {
         $glow="cyan"
       />
       <nav>
-        <Linkbutton as="a" color="lightgreen">
+        <Linkbutton as="a" $color="lightgreen">
           <HelpIco /> Get Help
         </Linkbutton>
-        <Linkbutton as="a" color="yellow">
+        <Linkbutton as="a" $color="yellow">
           <ThemeIco /> Switch Theme
         </Linkbutton>
       </nav>

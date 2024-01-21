@@ -5,7 +5,7 @@ let Linkbutton = styled(GlowContainer)`
   cursor: pointer;
   transition: all 0.2s ease-in;
   &:hover {
-    color: ${(props) => props.color ?? "red"};
+    color: ${(props) => props.$color ?? "red"};
     box-shadow: none;
   }
 `;
