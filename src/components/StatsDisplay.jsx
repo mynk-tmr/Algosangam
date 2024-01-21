@@ -29,7 +29,7 @@ export default function StatsDisplay() {
       <StatAtom
         bgcol="darkgreen"
         stat="Languages"
-        value="48"
+        value="30+"
         slot={<CodeIco />}
       />
       <StatAtom

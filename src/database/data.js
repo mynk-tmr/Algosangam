@@ -19,7 +19,7 @@ export const features = [
   },
   {
     head: "Codeblocks",
-    text: `Supports code compiling for 15+ languages such as JavaScript, Python, C, Go, and more. Simply click the "Run" button when viewing a post to see your output.`,
+    text: `Supports code compiling for 30+ languages such as JavaScript, Python, C, Go, and more. Simply click the "Run" button when viewing a post to see your output.`,
     colors: ["#2C3E50", "#FD746C"],
     gif: `https://placehold.co/600x400?text=Codeblocks`,
   },
