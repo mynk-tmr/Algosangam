@@ -1,7 +1,9 @@
 /* eslint-disable react/display-name */
 const withWrapper = (Icon) => (props) =>
   (
-    <div className="icon" style={{ display: "flex", placeItems: "center" }}>
+    <div
+      className="icon"
+      style={{ display: "inline-flex", placeItems: "center" }}>
       <Icon {...props} />
     </div>
   );
@@ -13,8 +15,14 @@ import {
   FaRegEdit,
   FaCode,
   FaUpload,
+  FaEye,
 } from "react-icons/fa";
-import { IoIosColorWand, IoMdLogIn } from "react-icons/io";
+import {
+  IoIosColorWand,
+  IoMdLogIn,
+  IoMdHeart,
+  IoMdClock,
+} from "react-icons/io";
 import { TiGroup } from "react-icons/ti";
 import { RiUserSmileLine } from "react-icons/ri";
 
@@ -28,3 +36,6 @@ export const UserIco = withWrapper(RiUserSmileLine);
 export const SnippetIco = withWrapper(FaRegEdit);
 export const CodeIco = withWrapper(FaCode);
 export const UploadIco = withWrapper(FaUpload);
+export const EyeIco = withWrapper(FaEye);
+export const LikeIco = withWrapper(IoMdHeart);
+export const ClockIco = withWrapper(IoMdClock);

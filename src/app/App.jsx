@@ -3,6 +3,7 @@ import BannerSection from "../components/BannerSection";
 import Header from "../components/Header";
 import StatsDisplay from "../components/StatsDisplay";
 import FeatureIntro from "../components/FeatureIntro";
+import SnipperCard from "../components/SnippetCard";
 
 const Section = styled.section`
   display: grid;
@@ -19,6 +20,9 @@ export default function App() {
       </Section>
       <StatsDisplay />
       <FeatureIntro />
+      <section style={{ height: "100vh", padding: "1rem" }}>
+        <SnipperCard />
+      </section>
     </>
   );
 }
