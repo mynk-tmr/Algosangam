@@ -1,1 +1,1 @@
-https://www.frontendmentor.io/challenges
+https://mynk-tmr.github.io/algosangam/
