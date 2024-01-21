@@ -3,7 +3,7 @@ const snippets = [
     title: `Simple Bunjs Server`,
     likes: `3`,
     views: `122`,
-    createdAt: new Date(2024, 1, 3),
+    date: new Date(2024, 1, 3),
     lang: `javascript`,
     content: `Bun.serve({
   fetch(req) {

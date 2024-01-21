@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { ClockIco, CodeIco, EyeIco, LikeIco } from "../shared/icons";
 import CodeBlock from "./CodeBlock";
-import snippets from "../database/snippets";
 
 const Wrapper = styled.section`
   padding: 1rem;
@@ -40,26 +39,36 @@ const Wrapper = styled.section`
   [data-lang] {
     background: lightsteelblue;
   }
+  [data-code] {
+    margin-top: 1rem;
+  }
 `;
 
-export default function SnipperCard() {
+export default function SnipperCard({
+  title,
+  likes,
+  views,
+  date,
+  lang,
+  content,
+}) {
   return (
     <Wrapper>
-      <h1>Simple Bunjs Server</h1>
+      <h1>{title}</h1>
       <data data-likes>
-        <LikeIco /> 0 likes
+        <LikeIco /> {likes} likes
       </data>
       <data data-views>
-        <EyeIco /> 122 views
+        <EyeIco /> {views} views
       </data>
       <time>
-        <ClockIco /> {new Date().toLocaleDateString()}
+        <ClockIco /> {date?.toLocaleDateString()}
       </time>
       <data data-lang>
-        <CodeIco /> Javascript
+        <CodeIco /> {lang}
       </data>
       <figure data-code>
-        <CodeBlock lang={snippets[0].lang}>{snippets[0].content}</CodeBlock>
+        <CodeBlock lang={lang}>{content}</CodeBlock>
       </figure>
     </Wrapper>
   );
