@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import { ClockIco, CodeIco, EyeIco, LikeIco } from "../shared/icons";
+import CodeBlock from "./CodeBlock";
+import snippets from "../database/snippets";
 
 const Wrapper = styled.section`
   padding: 1rem;
@@ -57,20 +59,7 @@ export default function SnipperCard() {
         <CodeIco /> Javascript
       </data>
       <figure data-code>
-        <pre>
-          <code className="language-js">
-            {`
-Bun.serve({
-  fetch(req) {
-    const url = new URL(req.url);
-    if (url.pathname === "/") return new Response("Home page!");
-    if (url.pathname === "/blog") return new Response("Blog!");
-    return new Response("404!");
-  },
-});
-            `}
-          </code>
-        </pre>
+        <CodeBlock lang={snippets[0].lang}>{snippets[0].content}</CodeBlock>
       </figure>
     </Wrapper>
   );
