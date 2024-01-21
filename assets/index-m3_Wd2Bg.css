@@ -1,0 +1,1 @@
+:root{--bg-color-app: black;--text-color-app: white}body{color:var(--text-color-app);background-color:var(--bg-color-app)}body::-webkit-scrollbar{width:7px;background-color:#fff}body::-webkit-scrollbar-thumb{background-color:#b22222}*,*:after,*:before{margin:0;padding:0;box-sizing:border-box}
