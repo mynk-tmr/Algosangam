@@ -1,53 +1,58 @@
 import styled from "styled-components";
 import GradientText from "./GradientText";
-import { useState, Fragment } from "react";
+import { useState } from "react";
 import { features } from "../database/data";
+import PreviewCard from "./PreviewCard";
 
 const Section = styled.section`
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template: 1fr 1fr / 1fr 1fr;
   min-height: 100vh;
-  padding: 4rem;
 
   .gifbox {
     background: gray;
     grid-row: span 2;
+    place-self: center;
   }
 
-  .info {
+  .info,
+  .slider {
     padding: 3rem;
     display: grid;
+  }
+
+  .slider {
+    grid-template-columns: repeat(4, minmax(100px, 1fr));
+    gap: 1rem;
   }
 `;
 
 export default function FeatureIntro() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const { head, text, colors, gif } = features[activeIndex];
+
   return (
     <Section>
-      <section className="gifbox">Gif</section>
+      <img src={gif} className="gifbox" />
       <section className="info">
-        {features.map(
-          ({ headcolors, head, text }, index) =>
-            index === activeIndex && (
-              <Fragment key={index}>
-                <GradientText as="h2" size="2.5rem" $colors={headcolors}>
-                  {head}
-                </GradientText>
-                <GradientText
-                  as="p"
-                  size="1.25rem"
-                  $colors={["white", headcolors.at(1)]}>
-                  {text}
-                </GradientText>
-              </Fragment>
-            )
-        )}
+        <GradientText as="h2" size="2.5rem" $colors={colors}>
+          {head}
+        </GradientText>
+        <GradientText as="p" size="1.25rem" $colors={["white", colors[1]]}>
+          {text}
+        </GradientText>
       </section>
       <section className="slider">
-        <button
-          onClick={() => setActiveIndex((1 + activeIndex) % features.length)}>
-          Next
-        </button>
+        {features.map((item, index) => (
+          <PreviewCard
+            head={item.head}
+            $color={item.colors[0]}
+            $bgimage={item.gif}
+            key={index}
+            isActive={activeIndex === index}
+            onClick={() => setActiveIndex(index)}
+          />
+        ))}
       </section>
     </Section>
   );
