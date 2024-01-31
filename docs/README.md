@@ -1,1 +1,1 @@
-https://mynk-tmr.github.io/algosangam/
+https://mynk-tmr.github.io/Algosangam/
